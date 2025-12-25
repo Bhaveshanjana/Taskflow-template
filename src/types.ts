@@ -1,11 +1,11 @@
 import type React from "react";
 
-export interface StartCardProps {
+export interface StatCardProps {
     title: string;
     value: string;
     subtitle: string;
     trend: string;
-    trendup: boolean;
+    trendUp: boolean;
     icon: React.ElementType;
 }
 export interface Task {
