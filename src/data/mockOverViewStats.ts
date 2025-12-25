@@ -2,7 +2,7 @@ import type { StatCardProps } from "../types"
 
 export type StateCardData = Omit<StatCardProps, 'icon'>;
 
-export const MOCK_STATE: StateCardData[] = [
+export const MOCK_STATS: StateCardData[] = [
     {
         title: 'Total Tasks',
         value: '147 task',
