@@ -1,4 +1,4 @@
-import type React from "react";
+import type { LucideIcon } from "lucide-react";
 
 export interface StatCardProps {
     title: string;
@@ -6,7 +6,7 @@ export interface StatCardProps {
     subtitle: string;
     trend: string;
     trendUp: boolean;
-    icon: React.ElementType;
+    icon: LucideIcon;
 }
 export interface Task {
     id: string;
