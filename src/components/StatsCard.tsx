@@ -45,7 +45,7 @@ const StatsCards: React.FC = () => {
                                 aria-label="Open card menu"
                                 title="Open card menu"
                             >
-                                <MoreVertical className="w-4 h-4" />
+                                <MoreVertical className="w-4 h-4 cursor-pointer" />
                             </button>
                         </div>
 

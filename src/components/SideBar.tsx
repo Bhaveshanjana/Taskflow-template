@@ -35,8 +35,6 @@ const Sidebar: React.FC<SidebarProps> = ({ variant = 'desktop', onClose }) => {
 
     return (
         <div className={containerClasses}>
-
-
             <div className="m-4 bg-white border border-gray-300 rounded-lg">
                 <div className="flex items-center gap-2 p-2 rounded-lg hover:bg-gray-50 cursor-pointer transition-colors">
                     <img
@@ -60,10 +58,8 @@ const Sidebar: React.FC<SidebarProps> = ({ variant = 'desktop', onClose }) => {
                     )}
                 </div>
             </div>
-
-
             <div className="px-4  py-4">
-                <div className="relative">
+                <div className="relative cursor-pointer">
                     <Search className="absolute left-3 top-2.5 w-4 h-4 text-gray-400" />
                     <input
                         type="text"
@@ -73,11 +69,7 @@ const Sidebar: React.FC<SidebarProps> = ({ variant = 'desktop', onClose }) => {
                     <span className="absolute right-3 top-2.5 text-xs text-gray-400 font-medium">⌘F</span>
                 </div>
             </div>
-
-
             <div className="flex-1 px-3 space-y-6">
-
-
                 <div className='border-b border-gray-300 pb-2'>
                     <h3 className="px-2 mb-2 text-sm text-[#302e2c]  font-medium tracking-wider">Essentials</h3>
                     <nav className="space-y-0.5">
@@ -90,12 +82,10 @@ const Sidebar: React.FC<SidebarProps> = ({ variant = 'desktop', onClose }) => {
                         <NavItem icon={BarChart2} label="Reporting" />
                     </nav>
                 </div>
-
-
                 <div>
                     <div className="flex items-center justify-between px-2 mb-2">
                         <button
-                            className="flex items-center gap-2 text-sm font-medium text-[#5f6368] hover:text-gray-900"
+                            className="flex items-center gap-2 text-sm font-medium text-[#5f6368] hover:text-gray-900 cursor-pointer"
                             onClick={() => setIsProjectsOpen((prev) => !prev)}
                         >
                             <ChevronDown
@@ -105,10 +95,10 @@ const Sidebar: React.FC<SidebarProps> = ({ variant = 'desktop', onClose }) => {
                             <span>Projects</span>
                         </button>
                         <div className="flex items-center gap-2 text-gray-500">
-                            <button className="p-1 hover:bg-gray-100 rounded-full">
+                            <button className="p-1 hover:bg-gray-100 rounded-full cursor-pointer">
                                 <Plus className="w-4 h-4" />
                             </button>
-                            <button className="p-1 hover:bg-gray-100 rounded-full">
+                            <button className="p-1 hover:bg-gray-100 rounded-full cursor-pointer">
                                 <GripVertical className="w-4 h-4" />
                             </button>
                         </div>
@@ -139,12 +129,10 @@ const Sidebar: React.FC<SidebarProps> = ({ variant = 'desktop', onClose }) => {
                         />
                     </nav>
                 </div>
-
-
                 <div>
                     <div className="flex items-center justify-between px-2 mb-2">
                         <button
-                            className="flex items-center gap-2 text-sm font-medium text-[#5f6368] hover:text-gray-900"
+                            className="flex items-center gap-2 text-sm font-medium text-[#5f6368] hover:text-gray-900 cursor-pointer"
                             onClick={() => setIsManagementOpen((prev) => !prev)}
                         >
                             <ChevronDown
@@ -154,10 +142,10 @@ const Sidebar: React.FC<SidebarProps> = ({ variant = 'desktop', onClose }) => {
                             <span>Management</span>
                         </button>
                         <div className="flex items-center gap-2 text-gray-500">
-                            <button className="p-1 hover:bg-gray-100 rounded-full">
+                            <button className="p-1 hover:bg-gray-100 rounded-full cursor-pointer">
                                 <Plus className="w-4 h-4" />
                             </button>
-                            <button className="p-1 hover:bg-gray-100 rounded-full">
+                            <button className="p-1 hover:bg-gray-100 rounded-full cursor-pointer">
                                 <GripVertical className="w-4 h-4" />
                             </button>
                         </div>
@@ -183,11 +171,10 @@ const Sidebar: React.FC<SidebarProps> = ({ variant = 'desktop', onClose }) => {
                         />
                     </nav>
                 </div>
-
                 <div>
                     <div className="flex items-center justify-between px-2 mb-2">
                         <button
-                            className="flex items-center gap-2 text-sm font-medium text-[#5f6368] hover:text-gray-900"
+                            className="flex items-center gap-2 text-sm font-medium text-[#5f6368] hover:text-gray-900 cursor-pointer"
                             onClick={() => setIsSupportOpen((prev) => !prev)}
                         >
                             <ChevronDown
@@ -197,10 +184,10 @@ const Sidebar: React.FC<SidebarProps> = ({ variant = 'desktop', onClose }) => {
                             <span>Support</span>
                         </button>
                         <div className="flex items-center gap-2 text-gray-500">
-                            <button className="p-1 hover:bg-gray-100 rounded-full">
+                            <button className="p-1 hover:bg-gray-100 rounded-full cursor-pointer">
                                 <Plus className="w-4 h-4" />
                             </button>
-                            <button className="p-1 hover:bg-gray-100 rounded-full">
+                            <button className="p-1 hover:bg-gray-100 rounded-full cursor-pointer">
                                 <GripVertical className="w-4 h-4" />
                             </button>
                         </div>

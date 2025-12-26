@@ -77,7 +77,7 @@ const BoardTab: React.FC = () => {
                             Hide completed cards to reduce noise.
                         </p>
                     </div>
-                    <button className="px-3 py-1.5 rounded-lg border border-gray-200 bg-white text-[11px] text-gray-700 hover:bg-gray-50">
+                    <button className="px-3 py-1.5 rounded-lg border border-gray-200 bg-white text-[11px] text-gray-700 hover:bg-gray-50 cursor-pointer">
                         Toggle
                     </button>
                 </div>
@@ -93,10 +93,10 @@ const BoardTab: React.FC = () => {
                     </p>
                 </div>
                 <div className="flex items-center gap-2 text-xs">
-                    <button className="px-3 py-1.5 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50">
+                    <button className="px-3 py-1.5 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 cursor-pointer">
                         Compact
                     </button>
-                    <button className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-gray-900 text-white hover:bg-gray-800">
+                    <button className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-gray-900 text-white hover:bg-gray-800 cursor-pointer">
                         <Plus className="w-3.5 h-3.5" />
                         New task
                     </button>
@@ -121,7 +121,7 @@ const BoardTab: React.FC = () => {
                                 </span>
                             </div>
                             <button
-                                className="p-1 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100"
+                                className="p-1 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100 cursor-pointer"
                                 aria-label="Column actions"
                                 title="Column actions"
                             >
@@ -167,7 +167,7 @@ const BoardTab: React.FC = () => {
                                 </article>
                             ))}
 
-                            <button className="mt-1 inline-flex items-center gap-1 text-[11px] text-gray-500 hover:text-gray-700">
+                            <button className="mt-1 inline-flex items-center gap-1 text-[11px] text-gray-500 hover:text-gray-700 cursor-pointer">
                                 <Plus className="w-3.5 h-3.5" />
                                 Add card
                             </button>

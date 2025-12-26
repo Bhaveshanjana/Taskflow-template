@@ -94,14 +94,14 @@ const ListsTab: React.FC = () => {
                         </p>
                     </div>
                     <div className="flex flex-wrap items-center gap-2 text-xs">
-                        <button className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50">
+                        <button className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 cursor-pointer">
                             <Filter className="w-3.5 h-3.5" />
                             Filters
                         </button>
-                        <button className="px-3 py-1.5 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50">
+                        <button className="px-3 py-1.5 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 cursor-pointer">
                             Group by status
                         </button>
-                        <button className="px-3 py-1.5 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50">
+                        <button className="px-3 py-1.5 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 cursor-pointer">
                             Sort by due date
                         </button>
                     </div>
@@ -176,7 +176,7 @@ const ListsTab: React.FC = () => {
                                     </span>
                                 </div>
 
-                                <button className="ml-auto p-1 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100">
+                                <button className="ml-auto p-1 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100 cursor-pointer">
                                     <MoreHorizontal className="w-4 h-4" />
                                 </button>
                             </div>

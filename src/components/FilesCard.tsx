@@ -91,10 +91,10 @@ const FilesTab: React.FC = () => {
                         </p>
                     </div>
                     <div className="flex items-center gap-2 text-xs">
-                        <button className="px-3 py-1.5 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50">
+                        <button className="px-3 py-1.5 rounded-lg border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 cursor-pointer">
                             Sort by last updated
                         </button>
-                        <button className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-gray-900 text-white hover:bg-gray-800">
+                        <button className="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-gray-900 text-white hover:bg-gray-800 cursor-pointer">
                             <Paperclip className="w-3.5 h-3.5" />
                             Upload
                         </button>
@@ -147,7 +147,7 @@ const FilesTab: React.FC = () => {
                                         )}
                                     </div>
 
-                                    <button className="ml-auto p-1 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100">
+                                    <button className="ml-auto p-1 text-gray-400 hover:text-gray-600 rounded-full hover:bg-gray-100 cursor-pointer">
                                         <MoreHorizontal className="w-4 h-4" />
                                     </button>
                                 </div>

@@ -83,20 +83,20 @@ const Timeline: React.FC = () => {
                     </div>
 
                     <div className="flex flex-wrap items-center gap-3 text-xs text-gray-500 sm:gap-6 sm:text-sm">
-                        <span className="cursor-pointer font-normal text-gray-900">
+                        <span className="cursor-pointer font-normal text-gray-900 cursor-pointer">
                             Today
                         </span>
-                        <span className="cursor-pointer font-normal hover:text-gray-900">
+                        <span className="cursor-pointer font-normal hover:text-gray-900 cursor-pointer">
                             Tomorrow
                         </span>
-                        <span className="cursor-pointer font-normal hover:text-gray-900">
+                        <span className="cursor-pointer font-normal hover:text-gray-900 cursor-pointer">
                             Upcoming
                         </span>
                         <button
                             className="ml-2 rounded-full border border-gray-200 p-1 hover:bg-gray-100"
                             aria-label="Add task"
                         >
-                            <Plus className="w-4 h-4 text-gray-600" />
+                            <Plus className="w-4 h-4 text-gray-600 cursor-pointer" />
                         </button>
                     </div>
                 </div>

@@ -69,7 +69,7 @@ const App = () => {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-3 md:justify-end">
-                  <div className="relative w-full sm:w-72 md:w-64 lg:w-72">
+                  <div className="relative w-full sm:w-72 md:w-64 lg:w-72 cursor-pointer">
                     <Search className="absolute left-3 top-2.5 h-4 w-4 text-gray-900" />
                     <input
                       type="text"
@@ -79,26 +79,26 @@ const App = () => {
                     <span className="absolute right-3 top-2.5 text-xs text-gray-400">⌘F</span>
                   </div>
 
-                  <button className="flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                  <button className="flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 cursor-pointer">
                     <span><span className="text-gray-400">Status:</span> All</span>
                     <ChevronDown className="h-4 w-4" />
                   </button>
 
-                  <button className="flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 hover:bg-gray-50">
+                  <button className="flex items-center gap-2 rounded-lg border border-gray-300 bg-white px-3 py-2 text-sm text-gray-700 hover:bg-gray-50 cursor-pointer">
                     <ArrowDownWideNarrow className="h-4 w-4" />
                     <span className="text-gray-400">Sort</span>
                   </button>
 
                   <div className="flex rounded-lg border border-gray-300 bg-white p-1">
                     <button
-                      className="rounded bg-gray-100 p-1.5 text-gray-900"
+                      className="rounded bg-gray-100 p-1.5 text-gray-900 cursor-pointer"
                       aria-label="Grid view"
                       title="Grid view"
                     >
                       <LayoutGrid className="h-4 w-4" />
                     </button>
                     <button
-                      className="p-1.5 text-gray-500 hover:text-gray-900"
+                      className="p-1.5 text-gray-500 hover:text-gray-900 cursor-pointer"
                       aria-label="List view"
                       title="List view"
                     >
@@ -115,7 +115,7 @@ const App = () => {
                     <button
                       key={tab}
                       onClick={() => setActiveTab(tab)}
-                      className={`pb-4 text-sm  transition-colors relative ${activeTab === tab
+                      className={`pb-4 text-sm cursor-pointer transition-colors relative ${activeTab === tab
                         ? 'text-gray-900'
                         : 'text-gray-500 hover:text-gray-700'
                         }`}
