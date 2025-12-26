@@ -1,3 +1,4 @@
+import Sidebar from './components/SideBar'
 import './index.css'
 
 function App() {
@@ -5,7 +6,7 @@ function App() {
   return (
     <>
       <div>
-        <h1 className='text-3xl'>hi</h1>
+        <Sidebar/>
       </div>
     </>
   )
