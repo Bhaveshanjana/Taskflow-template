@@ -1,12 +1,9 @@
 import { useState } from 'react';
 import Sidebar from './components/SideBar';
-// import StatsCards from './components/StatsCards';
-import { StatusBreakdownChart, WeeklyProgressChart } from './components/DashBoardCarts';
-import Timeline from './components/TimeLineCard';
 import ListsTab from './components/ListCard';
-// import BoardTab from './components/BoardTab';
-// import FilesTab from './components/FilesTab';
+import Timeline from './components/TimeLineCard';
 import ErrorBoundary from './components/common/ErrorBoundary';
+import { StatusBreakdownChart, WeeklyProgressChart } from './components/DashBoardCarts';
 import {
   Search,
   LayoutGrid,
@@ -19,6 +16,7 @@ import {
 import StatsCards from './components/StatsCard';
 import BoardTab from './components/BoardCard';
 import FilesTab from './components/FilesCard';
+import { AnimatePresence, motion } from "motion/react";
 
 const App = () => {
   const [activeTab, setActiveTab] = useState('Overview');
@@ -27,19 +25,37 @@ const App = () => {
   return (
     <div className="min-h-screen bg-[#f1f1f1] text-primary">
       {/* Mobile sidebar overlay */}
-      {isSidebarOpen && (
-        <div className="fixed inset-0 z-40 flex lg:hidden">
-          <button
-            type="button"
-            className="absolute inset-0 h-full w-full bg-black/40"
-            aria-label="Close sidebar"
-            onClick={() => setIsSidebarOpen(false)}
-          />
-          <div className="relative z-50 h-full">
-            <Sidebar variant="overlay" onClose={() => setIsSidebarOpen(false)} />
+      <AnimatePresence>
+        {isSidebarOpen && (
+          <div className="fixed inset-0 z-40 flex lg:hidden">
+            {/* Backdrop */}
+            <motion.button
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              type="button"
+              className="absolute inset-0 h-full w-full bg-black/40"
+              aria-label="Close sidebar"
+              onClick={() => setIsSidebarOpen(false)}
+            />
+
+            {/* Sidebar */}
+            <motion.div
+              initial={{ x: "-100%" }}
+              animate={{ x: 0 }}
+              exit={{ x: "-100%" }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="relative z-50 h-full"
+            >
+              <Sidebar
+                variant="overlay"
+                onClose={() => setIsSidebarOpen(false)}
+              />
+            </motion.div>
           </div>
-        </div>
-      )}
+        )}
+      </AnimatePresence>
 
       <div className="flex min-h-screen">
         {/* Desktop sidebar */}
@@ -107,8 +123,6 @@ const App = () => {
                   </div>
                 </div>
               </div>
-
-
               <div className="border-b border-gray-300">
                 <nav className="flex gap-8">
                   {['Overview', 'Lists', 'Board', 'Timeline', 'Files'].map((tab) => (
