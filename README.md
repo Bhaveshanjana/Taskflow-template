@@ -1,73 +1,117 @@
-# React + TypeScript + Vite
+## Employee Task Management Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An **analytics dashboard for employee task management**, built to help admins and managers track tasks, projects, priorities, and employee workload in one unified interface.
 
-Currently, two official plugins are available:
+The dashboard provides high-level insights through charts and overview panels, along with detailed task views such as lists, boards, files, and timelines — all powered by mock data for frontend-focused development.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Overview
 
-## React Compiler
+This project recreates a production-style admin dashboard experience.  
+Admins can quickly understand:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- How many tasks are **pending, in progress, completed, or under review**
+- Which tasks are assigned to **which employee and project**
+- Task **priority levels** and **due dates**
+- Overall progress through **visual analytics and charts**
 
-## Expanding the ESLint configuration
+The UI is optimized for both **desktop and mobile**, with smooth transitions and interactions.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+#### Tech Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Framework:** React + TypeScript
+- **Styling:** Tailwind CSS
+- **Animations:** Framer Motion
+- **Charts:** Recharts
+- **Icons:** lucide-react
+- **Bundler / Dev Server:** Vite
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+#### Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Admin task overview with analytics
+- Multiple task views (Board, List, Timeline, Files)
+- Employee and project-based task tracking
+- Fully responsive layout (mobile → large screens)
+- Smooth UI animations and transitions
+
+#### Project Structure
+
+```
+src/
+├─ main.tsx # Application entry point
+├─ App.tsx # Main layout, sidebar, tabs, and views
+│
+├─ components/ # UI components
+│ ├─ Sidebar.tsx
+│ ├─ StatsCards.tsx
+│ ├─ BoardTab.tsx
+│ ├─ ListsTab.tsx
+│ ├─ FilesTab.tsx
+│ ├─ Timeline.tsx
+│ ├─ DashboardCharts.tsx
+│ └─ common/ # ErrorBoundary, loaders, shared UI
+│
+├─ data/ # Mock data used throughout the app
+│ ├─ taskStats.ts
+│ ├─ tasks.ts
+│ ├─ projects.ts
+│ ├─ employees.ts
+│ ├─ boardColumns.ts
+│ └─ timelineData.ts
+│
+├─ services/
+│ └─ taskService.ts # Simulated service layer (mock API)
+│
+├─ types/
+│ └─ index.ts # Shared TypeScript types
+│
+└─ styles/
+└─ index.css # Global styles (Tailwind setup)
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#### Mock Data & Service Layer
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- This project uses **locally mocked data** to simulate a real backend, including realistic loading states and error scenarios.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+#### Mock Data (`src/data/`)
+
+- Task statistics (total, completed, in progress, due)
+- Individual tasks with:
+  - Title
+  - Assigned employee
+  - Project
+  - Priority
+  - Status
+  - Due date
+- Kanban board columns and task mapping
+- Timeline events
+- Files and list view data
+
+#### Simulated Service (`src/services/taskService.ts`)
+
+- Acts like a real API layer
+- Introduces artificial latency
+- Allows easy replacement with a real backend later
+
+> No external APIs or keys are required — all data is frontend-only and deterministic.
+
+### Run Locally
+
+#### Install & Start
+
+```bash
+npm install
+npm run dev
 ```
+
+#### Build for Production
+
+```bash
+npm run build
+npm run preview
+```
+
+#### Inspiration
+
+The design and overall dashboard concept were inspired by
+[Karan Kendre](https://github.com/kendrekaran).
+This project was fully recreated and implemented independently to practice and demonstrate modern frontend architecture, responsiveness, and data visualization.
