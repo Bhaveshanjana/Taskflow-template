@@ -124,7 +124,7 @@ const App = () => {
                 </div>
               </div>
               <div className="border-b border-gray-300">
-                <nav className="flex gap-8">
+                <nav className="flex gap-7">
                   {['Overview', 'Lists', 'Board', 'Timeline', 'Files'].map((tab) => (
                     <button
                       key={tab}
