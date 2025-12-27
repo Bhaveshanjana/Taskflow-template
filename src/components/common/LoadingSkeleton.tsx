@@ -81,11 +81,12 @@ export const TimelineSkeleton: React.FC = () => (
                     <div className="h-7 w-7 rounded-full bg-gray-100" />
                     <div className="h-4 w-32 rounded bg-gray-100" />
                 </div>
-                <div className="flex gap-4">
-                    <div className="h-4 w-10 rounded bg-gray-100" />
-                    <div className="h-4 w-16 rounded bg-gray-100" />
-                    <div className="h-8 w-8 rounded-full border border-gray-200 bg-gray-50" />
-                </div>
+            </div>
+            <div className="flex gap-4">
+                <div className="h-4 w-10 rounded bg-gray-100" />
+                <div className="h-4 w-16 rounded bg-gray-100" />
+                <div className="h-4 w-16 rounded bg-gray-100" />
+                <div className="h-6 w-6 -translate-y-1 rounded-full border border-gray-200 bg-gray-50" />
             </div>
             <div className="space-y-3">
                 {Array.from({ length: 3 }).map((_, index) => (
@@ -172,12 +173,12 @@ export const FilesSkeleton: React.FC = () => (
             <div className="flex items-center gap-3 rounded-xl border border-gray-200 bg-white px-3 py-3">
                 <div className="h-7 w-7 rounded-full bg-gray-100" />
                 <div>
-                    <div className="h-3 w-24 rounded bg-gray-100" />
-                    <div className="mt-1 h-4 w-32 rounded bg-gray-100" />
+                    <div className="h-3 w-10 rounded bg-gray-100" />
+                    <div className="mt-1 h-4 w-28 rounded bg-gray-100" />
                 </div>
             </div>
             <div className="rounded-xl border border-gray-200 bg-white px-3 py-3">
-                <div className="h-3 w-24 rounded bg-gray-100" />
+                <div className="h-3 w-30 rounded bg-gray-100" />
                 <div className="mt-2 h-4 w-10 rounded bg-gray-100" />
             </div>
             <div className="hidden items-center justify-between rounded-xl border border-gray-200 bg-white px-3 py-3 md:flex">
@@ -194,10 +195,14 @@ export const FilesSkeleton: React.FC = () => (
                     <div className="h-4 w-24 rounded bg-gray-100" />
                     <div className="mt-1 h-3 w-40 rounded bg-gray-100" />
                 </div>
-                <div className="flex gap-2">
+                <div className="hidden sm:visible gap-2 mb-6">
                     <div className="h-7 w-28 rounded-lg bg-gray-100" />
                     <div className="h-7 w-20 rounded-lg bg-gray-100" />
                 </div>
+            </div>
+            <div className="sm:hidden flex gap-2 mb-6">
+                <div className="h-7 w-28 rounded-lg bg-gray-100" />
+                <div className="h-7 w-20 rounded-lg bg-gray-100" />
             </div>
             <div className="space-y-3">
                 {Array.from({ length: 4 }).map((_, index) => (
