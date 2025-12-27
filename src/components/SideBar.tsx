@@ -205,7 +205,7 @@ const Sidebar: React.FC<SidebarProps> = ({ variant = 'desktop', onClose }) => {
     );
 };
 
-const NavItem = ({ icon: Icon, label, active = false, count }: { icon: any, label: string, active?: boolean, count?: string }) => (
+const NavItem = ({ icon: Icon, label, active = false }: { icon: any, label: string, active?: boolean, count?: string }) => (
     <a
         href="#"
         className={`flex items-center justify-between px-3 py-2 rounded-lg text-sm font-noraml transition-colors ${active

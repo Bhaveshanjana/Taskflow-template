@@ -1,7 +1,7 @@
 import { BOARD_COLUMNS, type BoardColumn } from "../data/mockBoard";
 import { FILE_ITEMS, type FileData } from "../data/mockFiles";
 import { LIST_TASK, type ListTask } from "../data/mockLists";
-import { MOCK_STATS, type StateCardData } from "../data/mockOverViewStats";
+import { MOCK_STATS, type StatCardData } from "../data/mockOverViewStats";
 import {
     STATUS_DATA,
     WEEKLY_DATA,
@@ -37,7 +37,7 @@ async function SimulatedNetwork<T>(value: T): Promise<T> {
 }
 
 export const taskService = {
-    async fetchStats(): Promise<StateCardData[]> {
+    async fetchStats(): Promise<StatCardData[]> {
         return SimulatedNetwork(MOCK_STATS);
     },
 
